@@ -18,16 +18,16 @@ Comment.init(
       allowNull: false,
     },
     user_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id'
       },
     },
     post_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'post',
         key: 'id'
       },
     }
@@ -41,4 +41,4 @@ Comment.init(
   }
 );
 
-module.exports = User;
+module.exports = Comment;
