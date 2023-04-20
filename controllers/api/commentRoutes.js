@@ -1,7 +1,7 @@
-// use homeRoutes as template for this, need to fix up
+
 
 const router = require('express').Router();
-const { Commnet } = require('../models');
+const { Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
