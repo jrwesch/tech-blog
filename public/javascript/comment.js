@@ -1,7 +1,7 @@
 async function commentFormHandler(event) {
     event.preventDefault();
 
-    const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
+    const comment_text = document.querySelector('#content-comment').value.trim();
     
     const post_id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
    
@@ -18,12 +18,12 @@ async function commentFormHandler(event) {
     });
 
 if (response.ok) {
-    document.location.reload();
+    document.location.replace('/homepage');
 } else {
-    alert(response.statusText);
+    alert('Failed to add comment');
 }
 }
 
-}
+};
 
-document.querySelector('.comment-form').addEventListener('submit', editFormHandler);
+document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);

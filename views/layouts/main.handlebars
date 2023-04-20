@@ -4,40 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Another Tech Blog</title>
+  <link rel="stylesheet" type="text/css" href="../../public/stylesheets/style.css">
+  
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
+  
+    <header>
+        <h1>
+        Welcome to Another Tech Blog
+        </h1>
+    </header>
+   
       <nav>
         <!-- Conditionally render login or logout links -->
+        <a href="/">Homepage</a> 
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <button class="in-out-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login_signup">login</a>
         {{/if}}
       </nav>
+
     </header>
+
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
+        <h2>Posts</h2>
+        <div>
+             <!-- Render the sub layout -->
+            {{{ body }}}
+        </div>
     </main>
-    <footer>
-      
-    </footer>
-  </div>
+  
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  <script src="../../public/javascript/logout.js"></script>
+  {{else}}
+  <script src="../../public/javascript/login.js"></script>
   {{/if}}
 </body>
 
