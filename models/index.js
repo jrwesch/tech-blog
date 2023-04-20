@@ -26,7 +26,7 @@ User.hasMany(Comment, {
   onDelete: 'SET NULL'
 });
 
-Post.hasMany(Commnent, {
+Post.hasMany(Comment, {
   foreignKey: 'post_id'
 });
 
