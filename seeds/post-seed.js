@@ -10,13 +10,13 @@ const postData = [
     {
         title: "Node MySQL2 Documentation",
         content: "https://www.npmjs.com/package/mysql2",
-        user_id: 3
+        user_id: 2
 
     },
     {
         title: "Express - Fast, unopinionated, minimalist web framework for Node.js",
         content: "https://expressjs.com/",
-        user_id: 5
+        user_id: 3
 
     },
 
