@@ -9,7 +9,11 @@
     if (username && email && password) {
       const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ 
+            username, 
+            email, 
+            password 
+        }),
         headers: { 'Content-Type': 'application/json' },
       });
   
@@ -20,8 +24,6 @@
       }
     }
   };
-
-
 
     document
     .querySelector('.signup-form')
