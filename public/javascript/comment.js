@@ -18,7 +18,7 @@ async function commentFormHandler(event) {
     });
 
 if (response.ok) {
-    document.location.replace('/homepage');
+    document.location.reload;
 } else {
     alert('Failed to add comment');
 }
