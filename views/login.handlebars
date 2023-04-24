@@ -1,4 +1,4 @@
-<div class="row">
+{{!-- <div class="row">
   <div class="col-md-6">
     <h2>Login</h2>
 
@@ -39,4 +39,25 @@
   </div>
 </div>
 
-<script src="./js/login.js"></script>
+<script src="./js/login.js"></script> --}}
+
+<h2>Login</h2>
+
+<section class="form-box">
+    <form class="login-form">
+        <div>
+            <label for="email-login">Username</label>
+            <input type="text" id="email-login" />
+        </div>
+        <div>
+            <label for="password-login">Password</label>
+            <input type="password" id="password-login" />
+        </div>
+        <div>
+            <button type="submit" id="submit">Login!</button>
+        </div>
+
+        <a href="/signup"><span id="signup-instead">Sign up instead</span></a>
+    </form>
+</section>
+<script src="/javascript/login.js"></script>
