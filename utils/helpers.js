@@ -1,5 +1,3 @@
-// From mini project -- need to adjust for this project
-
 module.exports = {
     format_date: date => {
       // Format date as MM/DD/YYYY
@@ -7,7 +5,7 @@ module.exports = {
       .getFullYear()}`;
     },
     format_plural: (word, amount) => {
-      if (amoutn !== 1) {
+      if (amount !== 1) {
         return `${word}s`;
       }
 
