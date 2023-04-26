@@ -3,7 +3,7 @@ async function postFormHandler(event) {
 
     const title = document.querySelector('input[name="post-title"]').value.trim();
 
-    const post_content = document.querySelector('input[name="post-url]').value.trim();
+    const description = document.querySelector('input[name="description"]').value.trim();
 
     const response = await fetch(`/api/posts`, {
         method: 'POST',
@@ -17,7 +17,7 @@ async function postFormHandler(event) {
     });
 
     if (response.ok) {
-        documentation.location.replace('/dashboard');
+        document.location.replace('/dashboard');
     } else {
         alert('failed to add post');
     }
